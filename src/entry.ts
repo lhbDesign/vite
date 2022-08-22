@@ -5,7 +5,6 @@
  * @LastEditTime: 2022-08-16 14:35:47
  * @Description:
  */
-import { App } from "vue";
 import VButton from "./button";
 
 import "uno.css";
@@ -15,7 +14,7 @@ export { VButton };
 // 编写一个插件，实现一个install方法
 
 export default {
-  install(app: App): void {
-    app.component(VButton.name, VButton);
+  install(app): void {
+    app.use(VButton.name, VButton);
   },
 };
